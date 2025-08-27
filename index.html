@@ -5822,11 +5822,9 @@ document.getElementById('form-dat-hang-test').addEventListener('submit', functio
     const form = e.target;
     const formData = new FormData(form);
 
-    // Convert FormData to plain object
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
+   
+// Convert all formData to a plain JS object
+    const data = Object.fromEntries(formData.entries());
 
     fetch('https://functionappsale120250826082313.azurewebsites.net/api/Function1', {
         method: 'POST',
