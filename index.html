@@ -5831,6 +5831,7 @@ document.getElementById('form-dat-hang-test').addEventListener('submit', functio
     .then(response => response.json())
     .then(result => {
         console.log('Success:', result);
+        window.location.href = "/sale/thankyou";
     })
     .catch(error => {
         console.error('Error:', error);
